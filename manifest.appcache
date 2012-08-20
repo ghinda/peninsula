@@ -14,6 +14,7 @@ CACHE:
 /lib/images/icons-18-white.png
 /lib/images/icons-36-black.png
 /lib/images/icons-36-white.png
+/images/home-background.jpg
 /css/base.css
 /js/base.js
 {% for post in site.posts %}{% if post.image %}/images/{{ post.image }}
