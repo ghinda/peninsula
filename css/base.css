@@ -95,6 +95,8 @@ Unofficial Peninsula 2012 Program webapp
 	border-top: 1px solid #444;
 	border-bottom: 1px solid #444;
 	background-color: #111;
+
+	list-style-type: none;
 	
 	line-height: 150%;
 }
@@ -107,4 +109,17 @@ Unofficial Peninsula 2012 Program webapp
 .program-details .star-artist {
 	right: 0;
 	top: 0;
+}
+
+/* favorites */
+.favorites-list li {
+	display: none;
+}
+
+.favorites-list li .ui-link-inherit {
+	margin-left: inherit;
+}
+
+.show-favorite-artist {
+	display: block !important;
 }

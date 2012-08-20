@@ -35,7 +35,7 @@ layout: default
 				
 				{% if post.categories contains page.lang and post.day == page.day %}
 
-					<li class="artist">
+					<li class="artist" id="{{ post.url }}">
 						<span class="star-artist"></span>
 						<a href="{{ post.url }}">
 							<span class="artist-title">{{ post.title }}</span>

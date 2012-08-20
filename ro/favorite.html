@@ -11,8 +11,27 @@ lang: ro
 	</div>
 	
 	<div data-role="content">	
-		
-		
+			
+		<ul data-role="listview" class="favorites-list">
+			
+			{% for post in site.posts reversed %}
+				
+				{% if post.categories contains page.lang %}
+
+					<li class="artist favorite-artist" id="{{ post.url }}">
+						<a href="{{ post.url }}">
+							<span class="artist-title">{{ post.title }}</span>
+							<span class="artist-times">{{ post.date | date: "%H:%M" }} - {{ post.enddate | date: "%H:%M" }}</span>
+							<span class="artist-venue">{{ post.venue }}</span>
+						</a>
+					</li>
+
+				{% endif %}		
+				
+				
+			{% endfor %}
+			
+		</ul>
 		
 	</div>
 

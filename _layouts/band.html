@@ -15,12 +15,12 @@ layout: default
 	
 	<div data-role="content">		
 
-		<div class="program-details">
+		<li class="program-details" id="{{ page.url }}">
 			<span class="artist-venue">{{ page.venue }}</span>
 			<span class="artist-times"> {{ page.date | date: "%b %d, 2012 %H:%M" }} - {{ page.enddate | date: "%H:%M" }}</span>
 			
 			<span class="star-artist"></span>
-		</div>
+		</li>
 		
 		<div class="artist-description">
 			
