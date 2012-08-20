@@ -1,0 +1,110 @@
+/*
+Unofficial Peninsula 2012 Program webapp
+
+2012 © Ionut Colceriu - www.ghinda.net
+*/
+
+.ui-page {
+	background: #10131c !important;
+}
+
+.ui-btn-corner-all {
+	-moz-border-radius: 0.2em;
+	-webkit-border-radius: 0.2em;
+	border-radius: 0.2em;
+}
+
+.home-logo {
+	width: 100%;
+	margin-bottom: -5px;
+}
+
+.notice {
+	padding: 15px;
+	margin: -15px;
+	background-color: #c7267f;
+	
+	color: #000;
+	text-shadow: none;
+}
+
+.home-buttons {
+	padding: 15px;
+}
+
+.legal {
+	font-size: 80%;
+	text-align: center;
+}
+
+.venue-selector {
+	padding: 5px 15px 15px 15px;
+	margin: -15px;
+	
+	background-color: #efefef;
+}
+
+/* artist listsing */
+.artist {
+	position: relative;
+}
+
+.artist .ui-link-inherit {
+	margin-left: 50px;
+}
+
+.star-artist {
+	position: absolute;
+	width: 50px;
+	height: 100%;
+	
+	background: #555 url(../lib/images/icons-36-black.png) no-repeat;
+	background-position: -928px 50%;
+	
+	opacity: 0.5;
+}
+
+.star-artist.starred {
+	background-color: #C7267F;
+	background-image: url(../lib/images/icons-36-white.png);
+	opacity: 1;
+}
+
+.artist-title,
+.artist-times,
+.artist-venue {
+	display: block;
+	line-height: 150%;
+}
+
+.artist-times,
+.artist-venue {
+	font-size: 80%;
+}
+
+/* band */
+.artist-image {
+	width: 100%;
+	margin-bottom: -5px;
+}
+
+.program-details {
+	position: relative;	
+	padding: 15px;
+	margin: -15px -15px 10px -15px;
+	border-top: 1px solid #444;
+	border-bottom: 1px solid #444;
+	background-color: #111;
+	
+	line-height: 150%;
+}
+
+.program-details .artist-venue {
+	font-weight: bold;
+	font-size: 110%;
+}
+
+.program-details .star-artist {
+	right: 0;
+	top: 0;
+}

@@ -1,0 +1,68 @@
+---
+layout: default
+---
+
+<div data-role="page" data-theme="a">
+
+	<div data-role="header">
+		<a href="index.html" data-role="button" data-icon="arrow-l">Back</a>
+		<h1>{{ page.day }} August</h1>
+		<a href="favorite.html" data-role="button" data-icon="star" data-iconpos="notext">Favorite</a>
+	</div>
+
+	<div data-role="content">	
+		
+		<div class="venue-selector">
+			<a href="#venues" data-rel="popup" data-role="button" data-theme="d" data-icon="arrow-d" data-iconpos="right">{{ page.venue }}</a>
+		</div>
+
+		<div data-role="popup" id="venues" data-overlay-theme="a">
+			
+			<ul data-role="listview" data-inset="true">
+				<li data-role="divider" data-theme="a">{{ page.venue }}</li>
+				<li><a href="day{{ page.day }}.html">Toate locatiile</a></li>
+				{% if page.venue != 'Main Stage' %}
+					<li><a href="day{{ page.day }}main.html">Main Stage</a></li>
+				{% endif %}
+				{% if page.venue != 'Freedom Music Arena' %}
+					<li><a href="day{{ page.day }}freedom.html">Freedom Music Arena</a></li>
+				{% endif %}
+				{% if page.venue != 'Kiss Terrace' %}
+					<li><a href="day{{ page.day }}kiss.html">Kiss Terrace</a></li>
+				{% endif %}
+				{% if page.venue != 'Ciuc Music Live Stage' %}
+					<li><a href="day{{ page.day }}ciuc.html">Ciuc Music Live Stage</a></li>
+				{% endif %}
+				{% if page.venue != 'Booha The Academy' %}
+					<li><a href="day{{ page.day }}booha.html">Booha The Academy</a></li>
+				{% endif %}
+			</ul>
+			
+		</div>
+		
+		<ul data-role="listview">
+			
+			{% for post in site.posts reversed %}
+		
+				<!-- show only posts in lang -->	
+				{% if post.categories contains page.lang and post.day == page.day and post.venue == page.venue %}
+					
+					<li class="artist">
+						<span class="star-artist"></span>
+						<a href="{{ post.url }}">
+							<span class="artist-title">{{ post.title }}</span>
+							<span class="artist-times">{{ post.date | date: "%H:%M" }} - {{ post.enddate | date: "%H:%M" }}</span>
+							<span class="artist-venue">{{ post.venue }}</span>
+						</a>
+					</li>
+
+				{% endif %}		
+				
+				
+			{% endfor %}
+			
+		</ul>
+		
+	</div>
+
+</div>

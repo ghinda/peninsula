@@ -1,0 +1,50 @@
+---
+layout: language
+lang: ro
+---
+
+<div data-role="page" data-theme="a">
+
+	<img src="/images/home-background.jpg" class="home-logo">
+	
+	<div data-role="content" class="app-home">	
+		
+		<ul data-role="listview">
+			<li><a href="day23.html">23 August</a></li>
+			<li><a href="day24.html">24 August</a></li>
+			<li><a href="day25.html">25 August</a></li>
+			<li><a href="day26.html">26 August</a></li>
+		</ul>
+		
+		<div class="notice">
+			<p><strong>Atentie! </strong> Acesta aplicație reprezintă programul <strong><u>neoficial</u></strong> al festivalului Peninsula 2012. </p>
+			<p>Din această cauză programul afișat aici poate fi complet eronat față de cel oficial. </p>
+		</div>
+		
+		<div class="home-buttons">
+		
+			
+			<div data-role="controlgroup">
+				<a href="#languages" data-rel="popup" data-role="button" data-icon="arrow-d" data-iconpos="right">Limba</a>
+				<a href="about.html" data-role="button">Despre aplicație</a>
+			</div>
+		
+			<p class="legal"><a href="http://ghinda.net" target="_blank">2012 &copy; Ionuț Colceriu, ghinda.net</a></p>
+			
+		</div>
+
+		<div data-role="popup" id="languages" data-overlay-theme="a">
+			
+			<ul data-role="listview" data-inset="true">
+				<li data-role="divider" data-theme="a">Limba</li>
+				<li><a href="/ro/">Română</a></li>
+				{% comment %}
+				<li><a href="/hu/">Magyar</a></li>
+				{% endcomment  %}
+			</ul>
+			
+		</div>
+		
+	</div>
+
+</div>

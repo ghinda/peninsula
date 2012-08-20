@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<div data-role="page" data-theme="a">
+
+	<div data-role="header">
+		<a href="../../../day{{ page.day }}.html" data-role="button" data-icon="arrow-l">Back</a>
+		<h1>{{ page.title }}</h1>
+	</div>
+
+	{% if page.image %}
+		<img src="/images/{{ page.image }}" class="artist-image" />
+	{% endif %}
+	
+	<div data-role="content">		
+
+		<div class="program-details">
+			<span class="artist-venue">{{ page.venue }}</span>
+			<span class="artist-times"> {{ page.date | date: "%b %d, 2012 %H:%M" }} - {{ page.enddate | date: "%H:%M" }}</span>
+			
+			<span class="star-artist"></span>
+		</div>
+		
+		<div class="artist-description">
+			
+			<p>
+			{% if page.url contains '/hu/' %}
+			
+				{{ page.content_hu }}
+			
+			{% else %}
+			
+				{{ content }}
+			
+			{% endif %}
+			</p>
+			
+		</div>
+		
+	</div>
+
+</div>
