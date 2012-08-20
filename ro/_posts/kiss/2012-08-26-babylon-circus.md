@@ -7,7 +7,8 @@ enddate: 2012-08-26 23:30
 genre: Rock
 image: babylon-circus.jpg
 venue: Kiss Terrace
-content_hu: hu
+content_hu: |
+  A zenekar, amelyben az egyik tagnak a fejére szakadt az ég, és azóta kalapként hordja, a zenekar, amely cirkusz és terápia is egyben, a zenekar, amely 2010-ben mindenkit meggyőzőtt a Félszigeten. A francia Babylon Circus most már barátok közé tér vissza, a két évvel ezelőtti fellépésükkel ugyanis másfél óra alatt komoly rajongótábort építettek maguknak, amely azóta is visszavárja őket.
 ---
 
 Vorbim aici de trupa cu un membru căruia i-a picat cerul în cap şi îl poartă, de atunci, drept pălărie, care e terapie şi circ totodată şi care a impresionat, fără urmă de dubiu, la Peninsula, în 2010. Francezii de la Babylon Circus se întorc anul acesta printre prieteni, acelaşi grup impresionant de prieteni care s-a adunat în faţa scenei în urmă cu doi ani şi care îi aşteaptă, din nou, cu braţele deschise. 

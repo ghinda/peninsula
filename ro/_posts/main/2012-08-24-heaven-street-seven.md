@@ -7,7 +7,8 @@ enddate: 2012-08-24 19:30
 genre: Rock
 image: heavenstreetseven.jpg
 venue: Main Stage
-content_hu: hu
+content_hu: |
+  Valami, Sajnálom, Hol van az a krézi srác, Dél-Amerika, Ez a szerelem, Szia - ugye tudjuk, kikről van szó? Az 1995-ben alakult, 2010-ben fennállása tizenöt éves évfordulóját dupla válogatáslemezzel és jubileumi koncerttel ünneplő Heaven Street Seven az újkori hazai indie-gitárpop zenekarok idősebb nagytesója. Az új lemezeit nagyjából kétéves periódusokban prezentáló, kezdetben angol nyelven éneklő öttagú együttes 2000-ben jelentetett meg első ízben teljes egészében magyar nyelvű számokból álló dalcsokrot (Cukor), azóta pedig sorozatban szállítja az albumonként két-három közismert slágert produkáló „anyanyelvi” albumokat. Szűcs Krisztiánék az elmúlt években nagy sikerrel koncerteztek klubokban és fesztiválokon, s több világsztárral - REM, Radiohead, Fun Lovin Criminals, Morrissey - is léptek fel egy színpadon, nyertek rangos hazai (Fonogram) és komoly nemzetközi díjat (European Breakthrough Award) valamint 2007-ben tizenöt állomásos európai turnét is abszolváltak. A HS7 legfrissebb megjelenése a 2011 novemberétől hallható Gigerli című dal, és a három számot tartalmazó, december 6-tól ingyenesen letölthető Gigerli EP.
 ---
 
 Valami, Sajnálom, Hol van az a krézi srác, Dél-Amerika, Ez a szerelem, Szia – ştiţi despre cine este vorba, nu-i aşa? Trupa din Ungaria, alcătuită în 1995, şi-a sărbătorit în 2010 cinsprezece ani de carieră cu un dublu disc cu marile lor hituri şi cu un concert jubiliar, fiind antemergătorul trupelor recente de indie-guitarpop din Ungaria.

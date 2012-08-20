@@ -7,7 +7,7 @@ enddate: 2012-08-24 00:00
 genre: Rock
 image: oliviu-deysa.jpg
 venue: Kiss Terrace
-content_hu: hu
+content_hu: 
 ---
 
 În această formulă cei doi au fost prezenți în line-up-urile unor importante evenimente din 2011 (I Love Festival, Yellow Fest, Iures Dance Festival) precum și la numeroare petreceri din București și din țară.

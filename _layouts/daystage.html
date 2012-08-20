@@ -13,14 +13,22 @@ layout: default
 	<div data-role="content">	
 		
 		<div class="venue-selector">
-			<a href="#venues" data-rel="popup" data-role="button" data-theme="d" data-icon="arrow-d" data-iconpos="right">{{ page.venue }}</a>
+			<a href="#venues" data-rel="popup" data-role="button" data-theme="d" data-icon="arrow-d" data-iconpos="right">
+				{{ page.venue }}
+			</a>
 		</div>
 
 		<div data-role="popup" id="venues" data-overlay-theme="a">
 			
 			<ul data-role="listview" data-inset="true">
 				<li data-role="divider" data-theme="a">{{ page.venue }}</li>
-				<li><a href="day{{ page.day }}.html">Toate locatiile</a></li>
+				<li><a href="day{{ page.day }}.html">
+					{% if page.url contains '/hu/' %}
+						Minden helyszínen
+					{% else %}
+						Toate locatiile
+					{% endif %}
+				</a></li>
 				{% if page.venue != 'Main Stage' %}
 					<li><a href="day{{ page.day }}main.html">Main Stage</a></li>
 				{% endif %}

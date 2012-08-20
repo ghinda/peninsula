@@ -7,7 +7,8 @@ enddate: 2012-08-26 01:30
 genre: Rock
 image: disco-bears.jpg
 venue: Booha The Academy
-content_hu: 
+content_hu: |
+  A két szakállas temesvári gyerek által, Zack (Darius Jura) és Diegys (Gabriel Jitea) által alapított projekt változatos electro-szettjeiben remixek és saját bootlegek éppúgy helyet kapnak, mint disco, funk, frenchhouse, bassline, techno, rock és new wace elemek.
 ---
 
 Zack (Darius Jura) & Diegys (Gabriel Jitea), mai concret doi bărboși simpatici din Timișoara au luat cu asalt scena electro, înființând proiectul Disco Bears sub deviza "doi ursuleți, două borcane de miere și multe gânduri electro sucite. "

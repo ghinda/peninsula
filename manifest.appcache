@@ -16,8 +16,9 @@ CACHE:
 /lib/images/icons-36-white.png
 /css/base.css
 /js/base.js
-{% for post in site.posts %}{% if post.image %}/images/{{ post.image }} {% endif %}{% endfor %}
-{% for page in site.pages %}{% if page.url != ' ' and page.url != '/manifest.appcache' %}{{ page.url }} {% endif %}{% endfor %}
+{% for post in site.posts %}{% if post.image %}/images/{{ post.image }}
+{% endif %}{% endfor %}{% for page in site.pages %}{% if page.url != ' ' and page.url != '/manifest.appcache' %}{{ page.url }}
+{% endif %}{% endfor %}
 
 NETWORK:
 *

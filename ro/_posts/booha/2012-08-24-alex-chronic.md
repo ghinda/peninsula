@@ -7,7 +7,8 @@ enddate: 2012-08-25 03:00
 genre: Rock
 image: alex-chronic.jpg
 venue: Booha The Academy
-content_hu: 
+content_hu: |
+  2008 óta van jelen az elektronikus zenei szcénában house, electronica, indie és dance hangzások által uralt zenei ötvözetével. Kevert már a Stanton Warrios, a Freestylers, Mesmer,  Palotai és Ludmilla mellett.
 ---
 
 Prezent pe scena muzicii electronice autohtone din 2008, Alex Chronic reușește de fiecare dată să manipuleaza cu success prin platane tensiunea pe dancefloor datorită sound-ului său specific, un amalgam controlat de house, electronica indie sau dance. 

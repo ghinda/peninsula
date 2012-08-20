@@ -7,7 +7,8 @@ enddate: 2012-08-26 04:30
 genre: Rock
 image: goranga.jpg
 venue: Booha The Academy
-content_hu: 
+content_hu: |
+  Titus Carole aka DJ Missile eklektikus és energiadús szettjei az electronicától a szintipopon keresztül egészen a housig vagy a nu discóig terjedhetnek. Az event plannerként is dolgozó zenész a Boiler Club és a Booha College Partik rezidens dj-je, és olyan nevekkel lépett már fel,mint The magician, DJ Antipop (TelepopMusik), Gramophoedzie, Alex Metric, Gorangával együtt pedig a Chase and Status tavalyi félszigetes szettje előtt melegítették be a közönséget.
 ---
 
 Dj Goranga (Szőcs Tamás) s-a prezentat peninsularilor în ipostaza unui MC foarte talentat, deși acesta își începuse cariera muzicală ca VJ . Pentru că practică muzica la absolute a decis să urmeze o direcție clară, realizând remix-uri pentru piese de teatru, filme, expoziții și animații. Dar talentul său nu poate fi îngrădit, așadar două dintre pasiunile sale muzicale sunt manipularea sonoră și cântatul la diverse instrumente. Deși trăiește în Austria și lucrează intens la cariera sa acolo, Goranga nu ratează ediția de anul acesta a festivalului.  Dacă el ne onorează cu prezența, luați și gustați din muzica lui.

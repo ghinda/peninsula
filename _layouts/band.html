@@ -27,7 +27,11 @@ layout: default
 			<p>
 			{% if page.url contains '/hu/' %}
 			
-				{{ page.content_hu }}
+				{% if page.content_hu %}
+					{{ page.content_hu | markdownify }}
+				{% else %}
+					{{ content }}
+				{% endif %}
 			
 			{% else %}
 			

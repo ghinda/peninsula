@@ -13,13 +13,25 @@ layout: default
 	<div data-role="content">	
 		
 		<div class="venue-selector">
-			<a href="#venues" data-rel="popup" data-role="button" data-theme="d" data-icon="arrow-d" data-iconpos="right">Toate locatiile</a>
+			<a href="#venues" data-rel="popup" data-role="button" data-theme="d" data-icon="arrow-d" data-iconpos="right">
+				{% if page.url contains '/hu/' %}
+					Minden helyszínen
+				{% else %}
+					Toate locatiile
+				{% endif %}
+			</a>
 		</div>
 
 		<div data-role="popup" id="venues" data-overlay-theme="a">
 			
 			<ul data-role="listview" data-inset="true">
-				<li data-role="divider" data-theme="a">Toate locatiile</li>
+				<li data-role="divider" data-theme="a">
+					{% if page.url contains '/hu/' %}
+						Minden helyszínen
+					{% else %}
+						Toate locatiile
+					{% endif %}
+				</li>
 				<li><a href="day{{ page.day }}main.html">Main Stage</a></li>
 				<li><a href="day{{ page.day }}freedom.html">Freedom Music Arena</a></li>
 				<li><a href="day{{ page.day }}kiss.html">Kiss Terrace</a></li>
