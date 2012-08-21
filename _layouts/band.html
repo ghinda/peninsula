@@ -2,15 +2,24 @@
 layout: default
 ---
 
+{% if page.url contains '/hu/' %}
+	{% assign lang = 'hu' %}
+{% else %}
+	{% assign lang = 'ro' %}
+{% endif %}
+
+{% assign baseurl_nolang = 'http://ghinda.net/peninsula' %}
+{% assign baseurl = baseurl_nolang | append: '/' | append: lang %}
+
 <div data-role="page" data-theme="a">
 
 	<div data-role="header">
-		<a href="../../../day{{ page.day }}.html" data-role="button" data-icon="arrow-l">Back</a>
+		<a href="{{ baseurl }}/day{{ page.day }}.html" data-role="button" data-icon="arrow-l">Back</a>
 		<h1>{{ page.title }}</h1>
 	</div>
 
 	{% if page.image %}
-		<img src="/images/{{ page.image }}" class="artist-image" />
+		<img src="{{ baseurl_nolang }}/images/{{ page.image }}" class="artist-image" />
 	{% endif %}
 	
 	<div data-role="content">		

@@ -1,0 +1,46 @@
+---
+layout: default
+---
+
+{% if page.url contains '/hu/' %}
+	{% assign lang = 'hu' %}
+{% else %}
+	{% assign lang = 'ro' %}
+{% endif %}
+
+{% assign baseurl_nolang = 'http://ghinda.net/peninsula' %}
+{% assign baseurl = baseurl_nolang | append: '/' | append: lang %}
+
+<div data-role="page" data-theme="a">
+
+	<div data-role="header">
+		<a href="{{ baseurl }}/index.html" data-role="button" data-icon="arrow-l">Back</a>
+		<h1>My program</h1>
+	</div>
+	
+	<div data-role="content">	
+			
+		<ul data-role="listview" class="favorites-list">
+			
+			{% for post in site.posts reversed %}
+				
+				{% if post.categories contains page.lang %}
+
+					<li class="artist favorite-artist" id="{{ post.url }}">
+						<a href="{{ baseurl_nolang }}{{ post.url }}">
+							<span class="artist-title">{{ post.title }}</span>
+							<span class="artist-times">{{ post.date | date: "%b %d, 2012 %H:%M" }} - {{ post.enddate | date: "%H:%M" }}</span>
+							<span class="artist-venue">{{ post.venue }}</span>
+						</a>
+					</li>
+
+				{% endif %}		
+				
+				
+			{% endfor %}
+			
+		</ul>
+		
+	</div>
+
+</div>

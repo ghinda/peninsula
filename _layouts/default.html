@@ -7,18 +7,26 @@
 	<title>Peninsula 2012 - Targu Mures - Programul *Neoficial*</title> 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<base href="http://ghinda.net/peninsula/" />
 	
-	<link rel="stylesheet" href="lib/jquery.mobile.css" />
-	<link rel="stylesheet" href="css/base.css" />
-	<script src="lib/jquery.js"></script>
-	<script src="lib/jquery.mobile.js"></script>
+	{% if page.url contains '/hu/' %}
+		{% assign lang = 'hu' %}
+	{% else %}
+		{% assign lang = 'ro' %}
+	{% endif %}
+	
+	{% assign baseurl_nolang = 'http://ghinda.net/peninsula' %}
+	{% assign baseurl = baseurl_nolang | append: '/' | append: lang %}
+	
+	<link rel="stylesheet" href="{{ baseurl_nolang }}/lib/jquery.mobile.css" />
+	<link rel="stylesheet" href="{{ baseurl_nolang }}/css/base.css" />
+	<script src="{{ baseurl_nolang }}/lib/jquery.js"></script>
+	<script src="{{ baseurl_nolang }}/lib/jquery.mobile.js"></script>
 </head> 
 <body> 
 
 	{{ content }}
 	
-	<script src="js/base.js"></script>
+	<script src="{{ baseurl_nolang }}/js/base.js"></script>
 	
 	<script>
 		var _gaq = [['_setAccount', 'UA-19824700-1'], ['_trackPageview']];
