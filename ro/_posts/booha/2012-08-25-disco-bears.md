@@ -2,7 +2,7 @@
 layout: band
 title: Disco Bears
 day: 25
-date: 2012-08-25 24:00
+date: 2012-08-26 00:00
 enddate: 2012-08-26 01:30
 genre: Rock
 image: disco-bears.jpg
