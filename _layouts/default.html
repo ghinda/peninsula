@@ -1,5 +1,13 @@
-<!DOCTYPE html> 
-<html manifest="/manifest.appcache"> 
+<!DOCTYPE html>
+{% if page.url contains '/hu/' %}
+	{% assign lang = 'hu' %}
+{% else %}
+	{% assign lang = 'ro' %}
+{% endif %}
+
+{% assign baseurl_nolang = 'http://ghinda.net/peninsula' %}
+{% assign baseurl = baseurl_nolang | append: '/' | append: lang %}
+<html manifest="{{ baseurl_nolang }}/manifest.appcache"> 
 <!--
 <html>
 -->
@@ -7,15 +15,6 @@
 	<title>Peninsula 2012 - Targu Mures - Programul *Neoficial*</title> 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	
-	{% if page.url contains '/hu/' %}
-		{% assign lang = 'hu' %}
-	{% else %}
-		{% assign lang = 'ro' %}
-	{% endif %}
-	
-	{% assign baseurl_nolang = 'http://ghinda.net/peninsula' %}
-	{% assign baseurl = baseurl_nolang | append: '/' | append: lang %}
 	
 	<link rel="stylesheet" href="{{ baseurl_nolang }}/lib/jquery.mobile.css" />
 	<link rel="stylesheet" href="{{ baseurl_nolang }}/css/base.css" />
