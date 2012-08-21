@@ -3,6 +3,15 @@ layout: language
 lang: hu
 ---
 
+{% if page.url contains '/hu/' %}
+	{% assign lang = 'hu' %}
+{% else %}
+	{% assign lang = 'ro' %}
+{% endif %}
+
+{% assign baseurl_nolang = 'http://ghinda.net/peninsula' %}
+{% assign baseurl = baseurl_nolang | append: '/' | append: lang %}
+
 <div data-role="page" data-theme="a">
 
 	<img src="{{ baseurl_nolang }}/images/home-background.jpg" class="home-logo">
