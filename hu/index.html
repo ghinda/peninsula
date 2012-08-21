@@ -3,26 +3,17 @@ layout: language
 lang: hu
 ---
 
-{% if page.url contains '/hu/' %}
-	{% assign lang = 'hu' %}
-{% else %}
-	{% assign lang = 'ro' %}
-{% endif %}
-
-{% assign baseurl_nolang = 'http://ghinda.net/peninsula' %}
-{% assign baseurl = baseurl_nolang | append: '/' | append: lang %}
-
 <div data-role="page" data-theme="a">
 
-	<img src="{{ baseurl_nolang }}/images/home-background.jpg" class="home-logo">
+	<img src="../images/home-background.jpg" class="home-logo">
 	
 	<div data-role="content" class="app-home">	
 		
 		<ul data-role="listview">
-			<li><a href="{{ baseurl }}/day23.html">23 August</a></li>
-			<li><a href="{{ baseurl }}/day24.html">24 August</a></li>
-			<li><a href="{{ baseurl }}/day25.html">25 August</a></li>
-			<li><a href="{{ baseurl }}/day26.html">26 August</a></li>
+			<li><a href="day23.html">23 August</a></li>
+			<li><a href="day24.html">24 August</a></li>
+			<li><a href="day25.html">25 August</a></li>
+			<li><a href="day26.html">26 August</a></li>
 		</ul>
 		
 		<div class="notice">
@@ -35,7 +26,7 @@ lang: hu
 			
 			<div data-role="controlgroup">
 				<a href="#languages" data-rel="popup" data-role="button" data-icon="arrow-d" data-iconpos="right">Limba</a>
-				<a href="{{ baseurl }}/about.html" data-role="button">Despre aplicație</a>
+				<a href="about.html" data-role="button">Despre aplicație</a>
 			</div>
 		
 			<p class="legal"><a href="http://ghinda.net" target="_blank">2012 &copy; Ionuț Colceriu, ghinda.net</a></p>
@@ -46,9 +37,9 @@ lang: hu
 			
 			<ul data-role="listview" data-inset="true">
 				<li data-role="divider" data-theme="a">Limba</li>
-				<li><a href="{{ baseurl_nolang }}/ro/">Română</a></li>
+				<li><a href="../ro/">Română</a></li>
 				{% comment %}
-				<li><a href="{{ baseurl_nolang }}/hu/">Magyar</a></li>
+				<li><a href="../hu/">Magyar</a></li>
 				{% endcomment  %}
 			</ul>
 			
