@@ -3,22 +3,23 @@
 CACHE MANIFEST
 
 # rev {{ site.time }}
+{% assign baseurl_nolang = 'http://ghinda.net/peninsula' %}
 
 CACHE:
-/lib/jquery.js
-/lib/jquery.mobile.js
-/lib/jquery.mobile.css
-/lib/images/ajax-loader.gif
-/lib/images/ajax-loader.png
-/lib/images/icons-18-black.png
-/lib/images/icons-18-white.png
-/lib/images/icons-36-black.png
-/lib/images/icons-36-white.png
-/images/home-background.jpg
-/css/base.css
-/js/base.js
-{% for post in site.posts %}{% if post.image %}/images/{{ post.image }}
-{% endif %}{% endfor %}{% for page in site.pages %}{% if page.url != ' ' and page.url != '/manifest.appcache' %}{{ page.url }}
+{{ baseurl_nolang }}/lib/jquery.js
+{{ baseurl_nolang }}/lib/jquery.mobile.js
+{{ baseurl_nolang }}/lib/jquery.mobile.css
+{{ baseurl_nolang }}/lib/images/ajax-loader.gif
+{{ baseurl_nolang }}/lib/images/ajax-loader.png
+{{ baseurl_nolang }}/lib/images/icons-18-black.png
+{{ baseurl_nolang }}/lib/images/icons-18-white.png
+{{ baseurl_nolang }}/lib/images/icons-36-black.png
+{{ baseurl_nolang }}/lib/images/icons-36-white.png
+{{ baseurl_nolang }}/images/home-background.jpg
+{{ baseurl_nolang }}/css/base.css
+{{ baseurl_nolang }}/js/base.js
+{% for post in site.posts %}{% if post.image %}{{ baseurl_nolang }}/images/{{ post.image }}
+{% endif %}{% endfor %}{% for page in site.pages %}{% if page.url != ' ' and page.url != '/manifest.appcache' %}{{ baseurl_nolang }}{{ page.url }}
 {% endif %}{% endfor %}
 
 NETWORK:
