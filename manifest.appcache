@@ -19,7 +19,6 @@ CACHE:
 {{ baseurl_nolang }}/css/base.css
 {{ baseurl_nolang }}/js/base.js
 {% for post in site.posts %}{% if post.image %}{{ baseurl_nolang }}/images/{{ post.image }}
-{% endif %}{% endfor %}{% for page in site.pages %}{% if page.url != ' ' and page.url != '/manifest.appcache' %}{{ baseurl_nolang }}{{ page.url }}
 {% endif %}{% endfor %}
 
 NETWORK:

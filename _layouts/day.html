@@ -14,9 +14,9 @@ layout: default
 <div data-role="page" data-theme="a">
 
 	<div data-role="header">
-		<a href="index.html" data-role="button" data-icon="arrow-l">Back</a>
+		<a href="index.html" data-role="button" data-icon="arrow-l" data-prefetch>Back</a>
 		<h1>{{ page.day }} August</h1>
-		<a href="favorite.html" data-role="button" data-icon="star" data-iconpos="notext">Favorite</a>
+		<a href="favorite.html" data-role="button" data-icon="star" data-iconpos="notext" data-prefetch>Favorite</a>
 	</div>
 
 	<div data-role="content">	
@@ -41,11 +41,11 @@ layout: default
 						Toate locatiile
 					{% endif %}
 				</li>
-				<li><a href="day{{ page.day }}main.html">Main Stage</a></li>
-				<li><a href="day{{ page.day }}freedom.html">Freedom Music Arena</a></li>
-				<li><a href="day{{ page.day }}kiss.html">Kiss Terrace</a></li>
-				<li><a href="day{{ page.day }}ciuc.html">Ciuc Music Live Stage</a></li>
-				<li><a href="day{{ page.day }}booha.html">Booha The Academy</a></li>
+				<li><a href="day{{ page.day }}main.html" data-prefetch>Main Stage</a></li>
+				<li><a href="day{{ page.day }}freedom.html" data-prefetch>Freedom Music Arena</a></li>
+				<li><a href="day{{ page.day }}kiss.html" data-prefetch>Kiss Terrace</a></li>
+				<li><a href="day{{ page.day }}ciuc.html" data-prefetch>Ciuc Music Live Stage</a></li>
+				<li><a href="day{{ page.day }}booha.html" data-prefetch>Booha The Academy</a></li>
 			</ul>
 			
 		</div>
