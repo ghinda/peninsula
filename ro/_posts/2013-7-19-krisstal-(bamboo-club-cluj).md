@@ -1,0 +1,10 @@
+---
+layout: band
+title: KRISSTAL (Bamboo Club Cluj)
+day: 19
+date: 2013-07-20 01:30
+image: 
+venue: SOUND OF TOWN RED BULL
+---
+
+

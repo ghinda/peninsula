@@ -10,14 +10,14 @@ layout: default
 	</div>
 
 	{% if page.image %}
-		<img src="../../../../images/{{ page.image }}" class="artist-image" />
+		<img src="../../../../media/images/{{ page.image }}" class="artist-image" />
 	{% endif %}
 	
 	<div data-role="content">		
 
 		<li class="program-details" id="{{ page.url }}">
 			<span class="artist-venue">{{ page.venue }}</span>
-			<span class="artist-times">{{ page.date | date: "%b %d, 2012 %H:%M" }} - {{ page.enddate | date: "%H:%M" }}</span>
+			<span class="artist-times">{{ page.date | date: "%b %d, 2012 %H:%M" }}</span>
 			
 			<span class="star-artist"></span>
 		</li>

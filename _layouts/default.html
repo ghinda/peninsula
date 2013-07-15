@@ -1,18 +1,11 @@
 <!DOCTYPE html>
-{% if page.url contains '/hu/' %}
-	{% assign lang = 'hu' %}
-{% else %}
-	{% assign lang = 'ro' %}
-{% endif %}
-
-{% assign baseurl_nolang = 'http://ghinda.net/peninsula' %}
-{% assign baseurl = baseurl_nolang | append: '/' | append: lang %}
-<html manifest="{{ baseurl_nolang }}/manifest.appcache"> 
+{% include settings.md %}
+<html manifest="{{ baseurl_nolang }}/manifest.appcache">
 <!--
 <html>
 -->
 	<head> 
-	<title>Peninsula 2012 - Targu Mures - Programul *Neoficial*</title> 
+	<title>Peninsula 2013 - Cluj-Napoca - Programul *Neoficial*</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 	

@@ -10,7 +10,6 @@ CACHE:
 {{ baseurl_nolang }}/lib/jquery.mobile.js
 {{ baseurl_nolang }}/lib/jquery.mobile.css
 {{ baseurl_nolang }}/lib/images/ajax-loader.gif
-{{ baseurl_nolang }}/lib/images/ajax-loader.png
 {{ baseurl_nolang }}/lib/images/icons-18-black.png
 {{ baseurl_nolang }}/lib/images/icons-18-white.png
 {{ baseurl_nolang }}/lib/images/icons-36-black.png
@@ -18,7 +17,7 @@ CACHE:
 {{ baseurl_nolang }}/images/home-background.jpg
 {{ baseurl_nolang }}/css/base.css
 {{ baseurl_nolang }}/js/base.js
-{% for post in site.posts %}{% if post.image %}{{ baseurl_nolang }}/images/{{ post.image }}
+{% for post in site.posts %}{% if post.image %}{{ baseurl_nolang }}/media/images/{{ post.image }}
 {% endif %}{% endfor %}
 
 NETWORK:

@@ -1,15 +1,7 @@
 ---
 layout: default
 ---
-
-{% if page.url contains '/hu/' %}
-	{% assign lang = 'hu' %}
-{% else %}
-	{% assign lang = 'ro' %}
-{% endif %}
-
-{% assign baseurl_nolang = 'http://ghinda.net/peninsula' %}
-{% assign baseurl = baseurl_nolang | append: '/' | append: lang %}
+{% include settings.md %}
 
 <div data-role="page" data-theme="a">
 
@@ -29,7 +21,7 @@ layout: default
 					<li class="artist favorite-artist" id="{{ post.url }}">
 						<a href="{{ baseurl_nolang }}{{ post.url }}">
 							<span class="artist-title">{{ post.title }}</span>
-							<span class="artist-times">{{ post.date | date: "%b %d, 2012 %H:%M" }} - {{ post.enddate | date: "%H:%M" }}</span>
+							<span class="artist-times">{{ post.date | date: "%b %d, 2012 %H:%M" }}</span>
 							<span class="artist-venue">{{ post.venue }}</span>
 						</a>
 					</li>

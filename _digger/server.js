@@ -5,6 +5,7 @@ var fs = require('fs');
 var moment = require('moment');
 
 var dist = './public';
+var days = [ 18, 19, 20, 21 ];
 
 //  format an ISO date using Moment.js
 //  http://momentjs.com/
@@ -12,16 +13,27 @@ var dist = './public';
 //  usage: {{dateFormat creation_date format="MMMM YYYY"}}
 Handlebars.registerHelper('dateFormat', function(context, block) {
   if (moment) {
-    var f = block.hash.format || "MMM Do, YYYY";
-    return moment(Date(context)).format(f);
+    var f = block.hash.format || "";
+    return moment(context).format(f);
   }else{
     return context;   //  moment plugin not available. return data as is.
   };
 });
 
+var download = function(uri, filename){
+	request.head(uri, function(err, res, body){
+		request(uri).pipe(fs.createWriteStream(filename));
+	});
+};
+
 var hbsBandTemplate = fs.readFileSync('./templates/band.hbs').toString();
+var hbsDayTemplate = fs.readFileSync('./templates/day.hbs').toString();
+var hbsDayStageTemplate = fs.readFileSync('./templates/daystage.hbs').toString();
 var hbsConfigTemplate = fs.readFileSync('./templates/_config.yml').toString();
+
 var bandTemplate = Handlebars.compile(hbsBandTemplate);
+var dayTemplate = Handlebars.compile(hbsDayTemplate);
+var dayStageTemplate = Handlebars.compile(hbsDayStageTemplate);
 var configTemplate = Handlebars.compile(hbsConfigTemplate);
 
 var convertTitle = function(title) {
@@ -29,6 +41,31 @@ var convertTitle = function(title) {
 }
 
 var locations = [];
+
+var rmDir = function(dirPath) {
+	try { var files = fs.readdirSync(dirPath); }
+	catch(e) { return; }
+	if (files.length > 0)
+	for (var i = 0; i < files.length; i++) {
+		var filePath = dirPath + '/' + files[i];
+		if (fs.statSync(filePath).isFile())
+		fs.unlinkSync(filePath);
+		else
+		rmDir(filePath);
+	}
+	fs.rmdirSync(dirPath);
+};
+
+// cleanup public
+rmDir(dist);
+fs.mkdirSync(dist);
+
+// make folders
+fs.mkdirSync(dist + '/ro', '0755');
+fs.mkdirSync(dist + '/ro/_posts', '0755');
+fs.mkdirSync(dist + '/media', '0755');
+fs.mkdirSync(dist + '/media/images', '0755');
+
 
 var url = 'http://peninsula.ro/index.php/schedule/musical';
 request(url, function(err, resp, body) {
@@ -78,28 +115,71 @@ request(url, function(err, resp, body) {
 
 				var dateDay = (parsedHour < 8 && parsedHour >= 0) ? day + 1 : day;
 
+				var realDate = new Date('2013-07-' + dateDay);
+				realDate.setHours(hour.split(':')[0]);
+				realDate.setMinutes(hour.split(':')[1]);
+
 				// hour
 				var band = {
-					name: $(cell).text(),
+					name: $(cell).text().replace(/:/g, ''),
 					link: $(cell).find('a').attr('href'),
 					day: day,
-					date: new Date('2013-07-' + dateDay + 'T' + hour).toISOString()
+					date: realDate.toISOString(),
+					location: locationTitle
 				}
 
 				//console.log(band.day);
-				console.log(band.date);
+				//console.log(band.date);
 				//console.log(parseInt(band.day));
 
-				if(band.name !== '') {
-					//console.log(day, hour, band);
-					if(band.link) console.log(band.link);
+				if(band.name === '') {
+					return;
 				}
 
-				var compiledTemplate = bandTemplate({ 'band': band });
+				var writeBandFile = function() {
 
-				// write to file
-				//fs.mkdirSync(dist + '/test', 0755);
-				//fs.writeFileSync(dist + '/test/test.md', compiledTemplate);
+					var compiledTemplate = bandTemplate({ 'band': band });
+
+					var fileName = realDate.getFullYear() + '-' + (realDate.getMonth() + 1) + '-' + realDate.getUTCDate() + '-' + convertTitle(band.name);
+
+					// write to file
+					fs.writeFileSync(dist + '/ro/_posts/' + fileName + '.md', compiledTemplate);
+
+				};
+
+				// if has band details page
+				if(band.link) {
+
+					// scrape band details
+					request(band.link, function(err, resp, body) {
+						if (err) throw err;
+
+						var $ = cheerio.load(body);
+
+						var $main = $('.main-text');
+
+						var image = $('header img', $main).attr('src'),
+							filename = image.split('/').pop(),
+							description = $('.text', $main).text().trim();
+
+						if(filename) {
+							download(image, dist + '/media/images/' + filename);
+							band.image = filename;
+						}
+
+						band.description = description;
+
+						writeBandFile();
+
+					});
+
+				} else {
+
+					writeBandFile();
+
+				}
+
+
 
 			});
 
@@ -108,16 +188,42 @@ request(url, function(err, resp, body) {
 
 		// parse schedule
 
-		console.log(convertTitle(locationTitle));
+		//console.log(convertTitle(locationTitle));
 
-		locations.push({ name: convertTitle(locationTitle) });
+		locations.push({
+			name: locationTitle,
+			filename: convertTitle(locationTitle)
+		});
 
 	});
 
-	var compiledTemplate = configTemplate({ 'locations': locations });
+	days.forEach(function(day) {
+
+		var compiledTemplate = dayTemplate({ 'day': day });
+
+		// write to file
+		fs.writeFileSync(dist + '/ro/day' + day + '.html', compiledTemplate);
+
+		locations.forEach(function(location) {
+
+			var compiledTemplate = dayStageTemplate({
+				'day': day,
+				'location': location.name
+			});
+
+			// write to file
+			fs.writeFileSync(dist + '/ro/day' + day + location.filename + '.html', compiledTemplate);
+
+		});
+
+	});
+
+	var compiledTemplate = configTemplate({
+		'locations': locations,
+		'days': days
+	});
 
 	// write to file
-	//fs.mkdirSync(dist + '/test', 0755);
 	fs.writeFileSync(dist + '/_config.yml', compiledTemplate);
 
 });

@@ -1,21 +1,13 @@
 ---
 layout: default
 ---
-
-{% if page.url contains '/hu/' %}
-	{% assign lang = 'hu' %}
-{% else %}
-	{% assign lang = 'ro' %}
-{% endif %}
-
-{% assign baseurl_nolang = 'http://ghinda.net/peninsula' %}
-{% assign baseurl = baseurl_nolang | append: '/' | append: lang %}
+{% include settings.md %}
 
 <div data-role="page" data-theme="a">
 
 	<div data-role="header">
 		<a href="index.html" data-role="button" data-icon="arrow-l" data-prefetch>Back</a>
-		<h1>{{ page.day }} August</h1>
+		<h1>{{ page.day }} Iulie</h1>
 		<a href="favorite.html" data-role="button" data-icon="star" data-iconpos="notext" data-prefetch>Favorite</a>
 	</div>
 
@@ -38,21 +30,11 @@ layout: default
 						Toate locatiile
 					{% endif %}
 				</a></li>
-				{% if page.venue != 'Main Stage' %}
-					<li><a href="day{{ page.day }}main.html" data-prefetch>Main Stage</a></li>
-				{% endif %}
-				{% if page.venue != 'Freedom Music Arena' %}
-					<li><a href="day{{ page.day }}freedom.html" data-prefetch>Freedom Music Arena</a></li>
-				{% endif %}
-				{% if page.venue != 'Kiss Terrace' %}
-					<li><a href="day{{ page.day }}kiss.html" data-prefetch>Kiss Terrace</a></li>
-				{% endif %}
-				{% if page.venue != 'Ciuc Music Live Stage' %}
-					<li><a href="day{{ page.day }}ciuc.html" data-prefetch>Ciuc Music Live Stage</a></li>
-				{% endif %}
-				{% if page.venue != 'Booha The Academy' %}
-					<li><a href="day{{ page.day }}booha.html" data-prefetch>Booha The Academy</a></li>
-				{% endif %}
+				{% for location in site.locations %}
+					{% if page.venue != location.name %}
+						<li><a href="day{{ page.day }}{{ location.filename }}.html" data-prefetch>{{ location.name }}</a></li>
+					{% endif %}
+				{% endfor %}
 			</ul>
 			
 		</div>
@@ -68,7 +50,7 @@ layout: default
 						<span class="star-artist"></span>
 						<a href="{{ baseurl_nolang }}{{ post.url }}">
 							<span class="artist-title">{{ post.title }}</span>
-							<span class="artist-times">{{ post.date | date: "%H:%M" }} - {{ post.enddate | date: "%H:%M" }}</span>
+							<span class="artist-times">{{ post.date | date: "%H:%M" }}</span>
 							<span class="artist-venue">{{ post.venue }}</span>
 						</a>
 					</li>

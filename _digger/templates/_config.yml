@@ -1,7 +1,14 @@
-auto: true
+safe: true
+lsi: false
+markdown: redcarpet
 pygments: false
 exclude:
 - README
+days:
+{{#each days}}- {{ this }}
+{{/each}}
 locations:
-{{#each locations}}- {{ name }}
+{{#each locations}}-
+  filename: {{ filename }}
+  name: {{ name }}
 {{/each}}

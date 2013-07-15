@@ -1,4 +1,44 @@
-auto: true
+safe: true
+lsi: false
+markdown: redcarpet
 pygments: false
 exclude:
 - README
+days:
+- 18
+- 19
+- 20
+- 21
+
+locations:
+-
+  filename: main-stage
+  name: MAIN STAGE
+-
+  filename: freedom-music-arena
+  name: FREEDOM MUSIC ARENA
+-
+  filename: kiss-terrace
+  name: KISS TERRACE
+-
+  filename: sound-of-town-red-bull
+  name: SOUND OF TOWN RED BULL
+-
+  filename: janinsula---vama-veche
+  name: JANINSULA - VAMA VECHE
+-
+  filename: cluj-rocks-stage-powered-by-the-shelter-agency
+  name: CLUJ ROCKS STAGE powered by THE SHELTER AGENCY
+-
+  filename: miert-pub
+  name: MIERT PUB
+-
+  filename: bruno-unplugged-wine-garden
+  name: BRUNO UNPLUGGED WINE GARDEN
+-
+  filename: tatratea-after-parties-by-wunderbar
+  name: TATRATEA after parties by wunderBar
+-
+  filename: fan-zone
+  name: FAN ZONE
+

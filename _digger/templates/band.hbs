@@ -1,3 +1,10 @@
-{{ band.name }}
+---
+layout: band
+title: {{ band.name }}
+day: {{ band.day }}
+date: {{ dateFormat band.date format='YYYY-MM-DD HH:mm' }}
+image: {{ band.image }}
+venue: {{ band.location }}
+---
 
-{{ dateFormat band.date format="MMMM YYYY" }}
+{{ band.description }}
