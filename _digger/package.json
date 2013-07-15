@@ -1,0 +1,36 @@
+{
+	"name": "SlideJump",
+	"version": "0.0.1",
+	"description": "",
+	"keywords": [
+
+	],
+	"author": {
+		"name": "",
+		"email": "",
+		"url":  ""
+	},
+	"homepage": "",
+	"repository": {
+		"type": "git",
+		"url": ""
+	},
+
+	"engines": {
+		"node": ">= 0.6.0",
+		"npm": ">= 1.0.0"
+	},
+
+	"dependencies": {
+		"request": "*",
+		"cheerio": "*",
+		"handlebars" :"*",
+		"moment": "*"
+	},
+	
+	"devDependencies": {},
+	"bundleDependencies": [],
+	
+	"private": true,
+	"main": "server.js"
+}

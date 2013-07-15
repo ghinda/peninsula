@@ -1,0 +1,16 @@
+auto: true
+pygments: false
+exclude:
+- README
+locations:
+- main-stage
+- freedom-music-arena
+- kiss-terrace
+- sound-of-town-red-bull
+- janinsula---vama-veche
+- cluj-rocks-stage-powered-by-the-shelter-agency
+- miert-pub
+- bruno-unplugged-wine-garden
+- tatratea-after-parties-by-wunderbar
+- fan-zone
+

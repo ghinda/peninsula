@@ -1,0 +1,7 @@
+auto: true
+pygments: false
+exclude:
+- README
+locations:
+{{#each locations}}- {{ name }}
+{{/each}}
