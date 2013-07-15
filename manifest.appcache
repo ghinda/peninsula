@@ -3,7 +3,7 @@
 CACHE MANIFEST
 
 # rev {{ site.time }}
-{% assign baseurl_nolang = 'http://ghinda.net/peninsula' %}
+{% include settings.md %}
 
 CACHE:
 {{ baseurl_nolang }}/lib/jquery.js
