@@ -1,6 +1,7 @@
 ---
 layout: band
 title: Meeting Organizatori - Invitat Balázsi-Pál Előd - Director PR
+fullname: 
 day: 20
 date: 2013-07-20 17:00
 image: 

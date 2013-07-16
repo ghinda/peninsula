@@ -1,6 +1,7 @@
 ---
 layout: band
 title: OCHO MACHO
+fullname: 
 day: 21
 date: 2013-07-21 19:00
 image: 196_OCHO.jpg

@@ -5,7 +5,7 @@ Unofficial Peninsula 2012 Program webapp
 */
 
 .ui-page {
-	background: #10131c !important;
+	background: #222 !important;
 }
 
 .ui-btn-corner-all {
@@ -17,12 +17,21 @@ Unofficial Peninsula 2012 Program webapp
 .home-logo {
 	width: 100%;
 	margin-bottom: -5px;
+
+	background-image: url(../images/grass-pattern.jpg);
+}
+
+.home-logo img {
+	display: block;
+	margin: 0 auto;
+	width: 460px;
+	max-width: 100%;
 }
 
 .notice {
 	padding: 15px;
 	margin: -15px;
-	background-color: #c7267f;
+	background-color: #52ACB8;
 	
 	color: #000;
 	text-shadow: none;
@@ -65,7 +74,7 @@ Unofficial Peninsula 2012 Program webapp
 }
 
 .star-artist.starred {
-	background-color: #C7267F;
+	background-color: #52ACB8;
 	background-image: url(../lib/images/icons-36-white.png);
 	opacity: 1;
 }
@@ -89,7 +98,7 @@ Unofficial Peninsula 2012 Program webapp
 }
 
 .program-details {
-	position: relative;	
+	position: relative;
 	padding: 15px;
 	margin: -15px -15px 10px -15px;
 	border-top: 1px solid #444;
@@ -120,6 +129,7 @@ Unofficial Peninsula 2012 Program webapp
 	margin-left: inherit;
 }
 
-.show-favorite-artist {
+.show-favorite-artist,
+.favorites-list li.ui-li-divider {
 	display: block !important;
 }

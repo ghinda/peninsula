@@ -1,6 +1,7 @@
 ---
 layout: band
 title: EMIR KUSTURICA &amp; THE NO SMOKING ORCHESTRA
+fullname: 
 day: 19
 date: 2013-07-19 23:00
 image: 201_emir_kicsi.jpg

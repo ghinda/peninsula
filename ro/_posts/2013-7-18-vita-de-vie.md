@@ -1,6 +1,7 @@
 ---
 layout: band
 title: VITA DE VIE
+fullname: 
 day: 18
 date: 2013-07-18 19:00
 image: 215_vitadevie.jpg

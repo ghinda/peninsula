@@ -7,18 +7,22 @@ layout: default
 
 	<div data-role="header">
 		<a href="index.html" data-role="button" data-icon="arrow-l">Back</a>
-		<h1>My program</h1>
+		<h1>Programul tau</h1>
 	</div>
 	
 	<div data-role="content">	
+
+		<div class="notice">
+			<p>Programele tale favorite (cele cu steluta) vor aparea aici. </p>
+		</div>
 			
-		<ul data-role="listview" class="favorites-list">
+		<ul data-role="listview" class="favorites-list" data-autodividers="true">
 			
 			{% for post in site.posts reversed %}
 				
 				{% if post.categories contains page.lang %}
 
-					<li class="artist favorite-artist" id="{{ post.url }}">
+					<li class="artist favorite-artist" id="{{ post.url }}" data-divider="{{ post.day }} Iulie">
 						<a href="{{ baseurl_nolang }}{{ post.url }}">
 							<span class="artist-title">{{ post.title }}</span>
 							<span class="artist-times">{{ post.date | date: "%b %d, 2012 %H:%M" }}</span>
@@ -26,7 +30,7 @@ layout: default
 						</a>
 					</li>
 
-				{% endif %}		
+				{% endif %}
 				
 				
 			{% endfor %}

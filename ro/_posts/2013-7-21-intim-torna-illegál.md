@@ -1,6 +1,7 @@
 ---
 layout: band
 title: INTIM TORNA ILLEGÁL
+fullname: 
 day: 21
 date: 2013-07-21 20:00
 image: 211_ITI.jpg

@@ -1,6 +1,7 @@
 ---
 layout: band
 title: WHITE WALLS
+fullname: 
 day: 20
 date: 2013-07-20 22:45
 image: 

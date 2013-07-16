@@ -4,7 +4,7 @@ var Handlebars = require('handlebars');
 var fs = require('fs');
 var moment = require('moment');
 
-var dist = './public';
+var dist = '..';
 var days = [ 18, 19, 20, 21 ];
 
 //  format an ISO date using Moment.js
@@ -56,12 +56,11 @@ var rmDir = function(dirPath) {
 	fs.rmdirSync(dirPath);
 };
 
-// cleanup public
-rmDir(dist);
-fs.mkdirSync(dist);
+// cleanup media and posts
+rmDir(dist + '/media');
+rmDir(dist + '/ro/_posts');
 
 // make folders
-fs.mkdirSync(dist + '/ro', '0755');
 fs.mkdirSync(dist + '/ro/_posts', '0755');
 fs.mkdirSync(dist + '/media', '0755');
 fs.mkdirSync(dist + '/media/images', '0755');

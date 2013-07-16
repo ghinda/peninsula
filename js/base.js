@@ -181,3 +181,14 @@ $(document).bind('pageinit', function() {
 	$('.star-artist').on('vclick', starArtist);
 	
 });
+
+$(document).on('mobileinit', function() {
+
+	// autodividers for the favorites
+	$.mobile.listview.prototype.options.autodividersSelector = function( elt ) {
+		var text = $.trim( elt.attr('data-divider') ) || null;
+
+		return text;
+	};
+
+});

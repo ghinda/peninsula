@@ -1,6 +1,7 @@
 ---
 layout: band
 title: CAMO &amp; KROOKED &amp; MC YOUTHSTAR
+fullname: 
 day: 19
 date: 2013-07-20 01:00
 image: 199_camo_kicsi.jpg

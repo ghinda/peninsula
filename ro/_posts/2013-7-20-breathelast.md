@@ -1,6 +1,7 @@
 ---
 layout: band
 title: BREATHELAST
+fullname: 
 day: 20
 date: 2013-07-20 19:00
 image: 

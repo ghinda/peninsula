@@ -1,6 +1,7 @@
 ---
 layout: band
 title: BLOOD PRINT
+fullname: 
 day: 18
 date: 2013-07-18 17:00
 image: 

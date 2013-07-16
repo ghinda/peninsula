@@ -1,6 +1,7 @@
 ---
 layout: band
 title: Birthday Party
+fullname: 
 day: 19
 date: 2013-07-19 18:00
 image: 

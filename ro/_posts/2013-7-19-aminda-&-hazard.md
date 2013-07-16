@@ -1,6 +1,7 @@
 ---
 layout: band
 title: AMINDA &amp; HAZARD
+fullname: 
 day: 19
 date: 2013-07-20 00:00
 image: 

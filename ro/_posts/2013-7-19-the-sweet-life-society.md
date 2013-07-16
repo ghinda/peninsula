@@ -1,6 +1,7 @@
 ---
 layout: band
 title: THE SWEET LIFE SOCIETY
+fullname: 
 day: 19
 date: 2013-07-19 21:00
 image: 193_sweetlife.jpg

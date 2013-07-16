@@ -19,10 +19,10 @@ layout: default
 			</a>
 		</div>
 
-		<div data-role="popup" id="venues" data-overlay-theme="a">
+		<div data-role="popup" id="venues"  data-theme="c" data-overlay-theme="a">
 			
-			<ul data-role="listview" data-inset="true">
-				<li data-role="divider" data-theme="a" data-prefetch>{{ page.venue }}</li>
+			<ul data-role="listview" data-inset="true" data-theme="c">
+				<li data-role="divider" data-theme="b" data-prefetch>{{ page.venue }}</li>
 				<li><a href="day{{ page.day }}.html">
 					{% if page.url contains '/hu/' %}
 						Minden helyszínen

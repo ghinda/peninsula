@@ -23,10 +23,10 @@ layout: default
 			</a>
 		</div>
 
-		<div data-role="popup" id="venues" data-overlay-theme="a">
+		<div data-role="popup" id="venues" data-theme="c" data-overlay-theme="a">
 			
-			<ul data-role="listview" data-inset="true">
-				<li data-role="divider" data-theme="a">
+			<ul data-role="listview" data-inset="true" data-theme="c">
+				<li data-role="divider" data-theme="b">
 					{% if page.url contains '/hu/' %}
 						Minden helyszínen
 					{% else %}
@@ -40,7 +40,7 @@ layout: default
 			
 		</div>
 		
-		<ul data-role="listview">
+		<ul data-role="listview" data-filter="true" data-filter-placeholder="Cauta.." data-filter-theme="a">
 			
 			{% for post in site.posts reversed %}
 				
