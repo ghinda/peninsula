@@ -1,7 +1,6 @@
 ---
 layout: band
 title: MARKY RAMONE&#x27;S BLITZKRIEG
-fullname: 
 day: 20
 date: 2013-07-20 21:00
 image: 200_marky_kicsi.jpg

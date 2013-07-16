@@ -1,7 +1,6 @@
 ---
 layout: band
 title: MODESTEP
-fullname: 
 day: 20
 date: 2013-07-21 00:00
 image: 206_modestep.jpg

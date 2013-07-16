@@ -10,8 +10,9 @@ lang: ro
 	</div>
 	
 	<div data-role="content" class="app-home">	
-		
+
 		<ul data-role="listview">
+			<li data-theme="b"><a href="favorite.html" data-prefetch>Programul tau</a></li>
 			{% for day in site.days %}
 				<li><a href="day{{ day }}.html" data-prefetch>{{ day }} Iulie</a></li>
 			{% endfor %}
@@ -26,11 +27,16 @@ lang: ro
 		
 			
 			<div data-role="controlgroup">
-				<a href="favorite.html" data-role="button">Programul tau</a>
 				<a href="about.html" data-role="button">Despre aplicație</a>
 			</div>
 		
-			<p class="legal"><a href="http://ghinda.net" target="_blank">2013 &copy; ghinda.net</a></p>
+			<p class="legal">
+				<a href="http://ghinda.net" target="_blank">
+				2013
+					<!--[if lte IE 8]><span style="filter: FlipH; -ms-filter: "FlipH"; display: inline-block;"><![endif]--><span style="-moz-transform: scaleX(-1); -o-transform: scaleX(-1); -webkit-transform: scaleX(-1); transform: scaleX(-1); display: inline-block;">©</span><!--[if lte IE 8]></span><![endif]-->
+				ghinda.net
+				</a>
+			</p>
 			
 		</div>
 		

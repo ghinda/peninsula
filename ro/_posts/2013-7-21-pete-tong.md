@@ -1,7 +1,6 @@
 ---
 layout: band
 title: PETE TONG
-fullname: 
 day: 20
 date: 2013-07-21 03:00
 image: 208_pete03.jpg

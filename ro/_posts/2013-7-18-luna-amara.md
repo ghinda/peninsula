@@ -1,7 +1,6 @@
 ---
 layout: band
 title: LUNA AMARA
-fullname: 
 day: 18
 date: 2013-07-19 00:00
 image: 

@@ -172,14 +172,14 @@ var starArtist = function(e) {
 };
 
 // init
-$(document).bind('pageinit', function() {
+$(document).one('pageinit', function() {
 
 	// check starred artists
-	$('[data-role=page]').on('pagebeforeshow', initFavorites);
-	
+	$(document).delegate('[data-role=page]', 'pagebeforeshow', initFavorites);
+
 	// star artist
-	$('.star-artist').on('vclick', starArtist);
-	
+	$(document).delegate('.star-artist', 'vclick', starArtist);
+
 });
 
 $(document).on('mobileinit', function() {

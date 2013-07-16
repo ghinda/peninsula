@@ -1,7 +1,6 @@
 ---
 layout: band
 title: LEMON BUCKET ORKESTRA
-fullname: 
 day: 19
 date: 2013-07-20 02:00
 image: 

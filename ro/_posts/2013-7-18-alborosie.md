@@ -1,7 +1,6 @@
 ---
 layout: band
 title: ALBOROSIE
-fullname: 
 day: 18
 date: 2013-07-18 21:00
 image: 209_albo kicsi.jpg

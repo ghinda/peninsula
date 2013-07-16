@@ -1,11 +1,26 @@
 /*
-Unofficial Peninsula 2012 Program webapp
+Unofficial Peninsula 2013 Program webapp
 
-2012 © Ionut Colceriu - www.ghinda.net
+2013 © Ionut Colceriu - www.ghinda.net
 */
 
+body,
+html,
 .ui-page {
 	background: #222 !important;
+}
+
+.ui-header {
+	max-width: 630px;
+}
+
+.ui-content {
+	max-width: 600px;
+}
+
+.ui-header,
+.ui-content {
+	margin: 0 auto !important;
 }
 
 .ui-btn-corner-all {
@@ -35,6 +50,10 @@ Unofficial Peninsula 2012 Program webapp
 	
 	color: #000;
 	text-shadow: none;
+}
+
+.favnotice {
+	padding-bottom: 30px;
 }
 
 .home-buttons {

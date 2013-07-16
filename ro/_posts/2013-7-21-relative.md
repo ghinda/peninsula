@@ -1,7 +1,6 @@
 ---
 layout: band
 title: RELATIVE
-fullname: 
 day: 21
 date: 2013-07-21 20:15
 image: 

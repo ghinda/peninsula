@@ -1,7 +1,6 @@
 ---
 layout: band
 title: SUNSET EYE (Obsession Club)
-fullname: 
 day: 20
 date: 2013-07-21 00:30
 image: 

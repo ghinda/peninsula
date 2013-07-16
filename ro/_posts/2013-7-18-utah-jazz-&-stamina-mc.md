@@ -1,7 +1,6 @@
 ---
 layout: band
 title: UTAH JAZZ &amp; STAMINA MC
-fullname: 
 day: 18
 date: 2013-07-19 01:00
 image: 192_utahjazz.jpg

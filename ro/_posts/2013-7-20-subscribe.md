@@ -1,7 +1,6 @@
 ---
 layout: band
 title: SUBSCRIBE
-fullname: 
 day: 20
 date: 2013-07-20 18:30
 image: 214_subscribe.jpg

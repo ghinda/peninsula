@@ -1,7 +1,6 @@
 ---
 layout: band
 title: Just D&#x27;Light
-fullname: 
 day: 18
 date: 2013-07-19 02:00
 image: 

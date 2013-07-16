@@ -1,7 +1,6 @@
 ---
 layout: band
 title: PAUL KALKBRENNER
-fullname: 
 day: 18
 date: 2013-07-18 23:00
 image: 197_pk_01.jpg

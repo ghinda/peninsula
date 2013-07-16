@@ -1,7 +1,6 @@
 ---
 layout: band
 title: AUTUMN HOTEL acustic
-fullname: 
 day: 19
 date: 2013-07-19 19:15
 image: 

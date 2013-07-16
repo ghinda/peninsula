@@ -1,7 +1,6 @@
 ---
 layout: band
 title: BODDO (Bamboo Club Cluj)
-fullname: 
 day: 19
 date: 2013-07-20 00:30
 image: 
