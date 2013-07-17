@@ -18,6 +18,8 @@ CACHE:
 {{ baseurl_nolang }}/images/peninsula-logo.png
 {{ baseurl_nolang }}/css/base.css
 {{ baseurl_nolang }}/js/base.js
+{% for page in site.pages %}{% if page.url != '/manifest.appcache' %}{{ page.url }}{% endif %}
+{% endfor %}
 
 NETWORK:
 *
