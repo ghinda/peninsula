@@ -11,10 +11,35 @@ lang: ro
 	
 	<div data-role="content" class="app-home">	
 
+		<ul data-role="listview" data-filter="true" data-filter-placeholder="Cauta.." data-filter-theme="c" data-filter-reveal="true" data-theme="c" class="search-list">
+
+			{% for post in site.posts reversed %}
+
+				<li class="artist" id="{{ post.url }}">
+					<span class="star-artist"></span>
+					<a href="{{ baseurl_nolang }}{{ post.url }}">
+						<span class="artist-title">{{ post.title }}</span>
+						<span class="artist-times">{{ post.date | date: "%A %d %B %H:%M" }}</span>
+						<span class="artist-venue">{{ post.venue }}</span>
+					</a>
+				</li>
+
+			{% endfor %}
+
+		</ul>
+
 		<ul data-role="listview">
 			<li data-theme="b"><a href="favorite.html" data-prefetch>Programul tau</a></li>
 			{% for day in site.days %}
-				<li><a href="day{{ day }}.html" data-prefetch>{{ day }} Iulie</a></li>
+				<li>
+					<a href="day{{ day }}.html" data-prefetch>
+						{% if day == 18 %}Joi {% endif %}
+						{% if day == 19 %}Vineri {% endif %}
+						{% if day == 20 %}Sambata {% endif %}
+						{% if day == 21 %}Duminica {% endif %}
+						{{ day }} Iulie
+					</a>
+				</li>
 			{% endfor %}
 		</ul>
 		

@@ -72,6 +72,10 @@ html,
 	background-color: #efefef;
 }
 
+.ui-content .ui-listview.search-list {
+	margin-bottom: 15px;
+}
+
 /* artist listsing */
 .artist {
 	position: relative;

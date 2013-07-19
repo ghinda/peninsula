@@ -22,7 +22,7 @@ layout: default
 				
 				{% if post.categories contains page.lang %}
 
-					<li class="artist favorite-artist" id="{{ post.url }}" data-divider="{{ post.day }} Iulie">
+					<li class="artist favorite-artist" id="{{ post.url }}" data-divider="{% if post.day == 18 %}Joi {% endif %}{% if post.day == 19 %}Vineri {% endif %}{% if post.day == 20 %}Sambata {% endif %}{% if post.day == 21 %}Duminica {% endif %} {{ post.day }} Iulie">
 						<a href="{{ baseurl_nolang }}{{ post.url }}">
 							<span class="artist-title">{{ post.title }}</span>
 							<span class="artist-times">{{ post.date | date: "%b %d, 2012 %H:%M" }}</span>

@@ -5,11 +5,7 @@ layout: default
 
 <div data-role="page" data-theme="a">
 
-	<div data-role="header">
-		<a href="index.html" data-role="button" data-icon="arrow-l" data-prefetch>Back</a>
-		<h1>{{ page.day }} Iulie</h1>
-		<a href="favorite.html" data-role="button" data-icon="star" data-iconpos="notext" data-prefetch>Favorite</a>
-	</div>
+	{% include day-header.html %}
 
 	<div data-role="content">	
 		
