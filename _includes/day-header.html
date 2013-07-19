@@ -1,0 +1,11 @@
+<div data-role="header">
+	<a href="index.html" data-role="button" data-icon="arrow-l" data-prefetch>Back</a>
+	<h1>
+		{% if page.day == 18 %}Joi {% endif %}
+		{% if page.day == 19 %}Vineri {% endif %}
+		{% if page.day == 20 %}Sambata {% endif %}
+		{% if page.day == 21 %}Duminica {% endif %}
+		{{ page.day }} Iulie
+	</h1>
+	<a href="favorite.html" data-role="button" data-icon="star" data-iconpos="notext" data-prefetch>Favorite</a>
+</div>
