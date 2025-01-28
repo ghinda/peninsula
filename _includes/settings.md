@@ -4,5 +4,5 @@
 	{% assign lang = 'ro' %}
 {% endif %}
 
-{% assign baseurl_nolang = '' %}
+{% assign baseurl_nolang = 'https://www.ghinda.net/peninsula' %}
 {% assign baseurl = baseurl_nolang | append: '/' | append: lang %}
